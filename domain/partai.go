@@ -6,12 +6,13 @@ import (
 )
 
 type Partai struct {
-	ID            int64     `gorm:"type:bigint; primaryKey; autoIncrement" json:"id"`
-	Name          string    `gorm:"type:varchar(100)" json:"name"`
-	Chairman      string    `gorm:"type:varchar(100)" json:"chairman"`
-	VisionMission string    `gorm:"type:varchar(100)" json:"vision_mission"`
-	Address       string    `gorm:"type:text" json:"address"`
-	Image         string    `gorm:"type:varchar(300)" json:"image"`
+	ID            int64  `gorm:"type:bigint; primaryKey; autoIncrement" json:"id"`
+	Name          string `gorm:"type:varchar(100)" json:"name"`
+	Chairman      string `gorm:"type:varchar(100)" json:"chairman"`
+	VisionMission string `gorm:"type:varchar(100)" json:"vision_mission"`
+	Address       string `gorm:"type:text" json:"address"`
+	Image         string `gorm:"type:varchar(300)" json:"image"`
+	PaslonPartai  []PaslonPartai
 	CreatedAt     time.Time `json:"created_at"`
 	UpdatedAt     time.Time `json:"updated_at"`
 }

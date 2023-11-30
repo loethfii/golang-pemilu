@@ -6,11 +6,12 @@ import (
 )
 
 type Paslon struct {
-	ID            int64     `gorm:"type:bigint; primaryKey; autoIncrement" json:"id"`
-	Name          string    `gorm:"type:varchar(100)" json:"name"`
-	SerialNumber  string    `gorm:"type:varchar(100)" json:"serial_number"`
-	VisionMission string    `gorm:"type:varchar(100)" json:"vision_mission"`
-	Image         string    `gorm:"type:varchar(300)" json:"image"`
+	ID            int64  `gorm:"type:bigint; primaryKey; autoIncrement" json:"id"`
+	Name          string `gorm:"type:varchar(100)" json:"name"`
+	SerialNumber  string `gorm:"type:varchar(100)" json:"serial_number"`
+	VisionMission string `gorm:"type:varchar(100)" json:"vision_mission"`
+	Image         string `gorm:"type:varchar(300)" json:"image"`
+	PaslonPartai  []PaslonPartai
 	CreatedAt     time.Time `json:"created_at"`
 	UpdatedAt     time.Time `json:"updated_at"`
 }
